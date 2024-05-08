@@ -1,0 +1,953 @@
+body
+{
+  font-family: oswald;
+  background-color: black;
+  color: white;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.page1
+{
+  height: 100vh;
+  width: 100%;
+  min-width: 300px;
+}
+.header
+{
+  display: flex;
+  justify-content: space-between;
+  padding: 1vh;
+  padding-left: 2vh;
+  padding-right: 2vh;
+  margin-top: 30px;
+  margin-left: 7%;
+  margin-right: 7%;
+  font-size: 200%;
+  color: white;
+  min-width: 100px
+}
+.header-topic
+{
+  text-shadow: 2px 2px 2px white;
+}
+.header a
+{
+  text-decoration: none;
+  color: white;
+  transition: .6s all;
+}
+.header a:hover
+{
+  opacity: .5;
+  text-decoration:underline;
+}
+.header a:active
+{
+  transition: 0s;
+  color: black;
+  text-decoration: underline;
+}
+
+.innerbody
+{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-size: 5vh;
+}
+
+.leftbody
+{
+  position: relative;
+  padding-top: 10vh;
+  padding-left: 10vh;
+  z-index: 3;
+  font-size: 100%;
+}
+.my-name
+{
+  color: bisque;
+  width: 100%;
+  text-align: right;
+  display: inline-block;
+  margin-top: 3%;
+  margin-bottom: 2%;
+  padding-left: 4%;
+  padding-right: 2%;
+  font-size: 10vh;
+  line-height: 100%;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  box-shadow: 10px 10px 10px 2px rgba(255, 255, 255, .2);
+  border-right: .1em solid rgb(255, 255, 255);
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 3s steps(40), blink-caret .5s step-start infinite;
+}
+@keyframes typing
+{
+  from{width: 0%;}
+  to{width: 100%;}
+}
+@keyframes blink-caret 
+{
+  from, to { border-color: white; } 
+  50% { border-color: rgb(0, 0, 0); } 
+}
+.student-para
+{
+  margin-top: 15vh;
+  font-size: 3vh;
+}
+.rightbody
+{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.profilephoto
+{
+  height: 60%;
+  width: 60%;
+  margin-left: 5%;
+  margin-top: 3%;
+  border-radius: 50%;
+  object-position: center;
+  object-fit: cover;
+}
+
+@media (max-width:1100px) 
+{
+  .header
+  {
+    font-size: 100%;
+  } 
+  .innerbody, .my-name, .student-para
+  {
+    font-size: 4vh;
+  }
+  .profilephoto
+  {
+    min-height: 50%;
+    min-width: 80%;
+  }
+}
+@media (max-width:700px) 
+{
+  .header
+  {
+    font-size: 80%;
+  } 
+  .innerbody, .my-name, .student-para
+  {
+    font-size: 3.5vh;
+  }
+  .profilephoto
+  {
+    min-height: 50%;
+    min-width: 80%;
+  }
+}
+@media (max-width:600px) 
+{
+  .header
+  {
+    font-size: 65%;
+  } 
+  .innerbody, .my-name, .student-para
+  {
+    font-size: 2vh;
+  }
+  .profilephoto
+  {
+    height: 10vh;
+    width: 20vh;
+  }
+}
+@media (max-width:370px) 
+{
+  .header
+  {
+    font-size: 40%;
+  } 
+  .innerbody,.student-para
+  {
+    font-size: 2.5vh;
+  }
+  .my-name
+  {
+    font-size: 5vh;
+  }
+  .profilephoto
+  {
+    height: 25vh;
+    width: 25vh;
+    transform: translate(-110%,170%);
+  }
+  .leftbody
+  {
+    padding-top: 2vh;
+    padding-left: 2vh;
+  }
+  
+}
+
+
+.page2
+{
+  height: 100vh;
+  width: 100%;
+  overflow-wrap: break-word;
+  margin-top: 1vh;
+  min-width: 198px;
+  position: relative;
+}
+.education-background
+{
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  z-index: -1;
+  opacity: .2;
+  object-fit: cover;
+}
+.education-heading
+{
+  text-shadow: 0 0 12px #FFFFFF, 0 0 20px black, 0 0 30px black;
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-top: 2%;
+  padding-left: 2%;
+  padding-right: 2%;
+  font-size: 13vh;
+  text-decoration: underline;
+}
+.education
+{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  position: relative;
+  padding: 3%;
+  padding-left: 10%;
+  margin-top: 1%;
+  column-gap: 10%;
+  row-gap: 10%;
+}
+
+.college ,.class-10th ,.class-12th
+{
+  position: relative;
+  height: 200%;
+  width: 100%;
+  color: black;
+  background-color:rgb(166, 190, 59);
+  border-radius: 10%;
+  box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  border: none;
+  overflow: hidden;
+  transition: .5s ease-in-out;
+}
+.college:hover, .class-10th:hover , .class-12th:hover
+{
+  transform: translate(8px,8px);
+  box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.5);
+  opacity: .8;
+  background-color: blueviolet;
+  color: white;
+}
+.edu-icon
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  font-size: 7vh;
+}
+.content
+{
+  position: absolute;
+  top: .01vh;
+  left: 5vh;
+  height: 30vh;
+  width: 20vh;
+  font-size: 2vh;
+  z-index: -1;
+  transform: translateY(120%);
+  transition: transform 0.5s ease;
+}
+.college:hover .edu-icon,
+.class-10th:hover .edu-icon,
+.class-12th:hover .edu-icon 
+{
+  visibility: hidden;
+}
+
+.college:hover .content,
+.class-10th:hover .content,
+.class-12th:hover .content 
+{
+  transform: translateY(0);
+  visibility: visible;
+}
+h1
+{
+  color: rgb(3, 2, 0);
+}
+@media(max-width: 1150px)
+{
+  .education-heading
+  {
+    font-size: 10vh;
+  }
+  .education
+  {
+    font-size: 3vh;
+    grid-template-columns: 1fr 1fr;
+  }
+  .college ,.class-10th ,.class-12th
+  {
+    position: relative;
+    height: 30vh;
+    width: 20vh;
+  }
+  .edu-icon
+  {
+    font-size: 5vh;
+  }
+  .content
+  {
+    font-size: 1vh;
+  }
+}
+@media (max-width:700px) 
+{
+  .education-heading
+  {
+    font-size: 9vh;
+  }
+  .education
+  {
+    font-size: 3vh;
+  }
+  .college ,.class-10th ,.class-12th
+  {
+    position: relative;
+    height: 30vh;
+    width: 20vh;
+  }
+  .edu-icon
+  {
+    font-size: 5vh;
+  }
+}
+@media (max-width:530px) 
+{
+  .education-heading
+  {
+    font-size: 9.8vh;
+  }
+  .education
+  {
+    font-size: 2.9vh;
+  }
+}
+@media (max-width:465px) 
+{
+  .education-heading
+  {
+    font-size: 8vh;
+  }
+  .education
+  {
+    font-size: 3vh;
+  }
+  .college ,.class-10th ,.class-12th
+  {
+    position: relative;
+    height: 30vh;
+    width: 15vh;
+  }
+  .edu-icon
+  {
+    font-size: 3.5vh;
+  }
+}
+@media (max-width:360px) 
+{
+  .education-heading
+  {
+    font-size: 4.5vh;
+  }
+  .education
+  {
+    font-size: 2vh;
+    grid-template-columns: 1fr;
+  }
+  .college ,.class-10th ,.class-12th
+  {
+    position: relative;
+    height: 20vh;
+    width: 10vh;
+  }
+  .edu-icon
+  {
+    font-size: 2vh;
+  }
+}
+
+
+
+
+.page3
+{
+  height: 210vh;
+  width: 100%;
+  overflow-wrap: break-word;
+  padding-right: 5%;
+  margin-top: 1vh;
+  min-width: 111px;
+  position: relative;
+}
+.education-background-2
+{
+  position: absolute;
+  height: 210vh;
+  width: 100%;
+  z-index: -1;
+  opacity: .1;
+  object-fit: cover;
+}
+.intern-heading
+{
+  text-shadow: 0 0 12px #FFFFFF, 0 0 20px black, 0 0 30px black;
+  padding-left: 6%;
+  padding-right: 8%;
+  font-size: 10vh;
+  text-decoration: underline;
+}
+.internship
+{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  padding-left: 12%;
+  padding-right: 8%;
+  font-size: 2.5vh;
+  white-space: pre-line;
+  margin-top: 3%;
+}
+.internship strong
+{
+  font-family: oswald;
+  font-size: 3vh;
+  color: antiquewhite;
+}
+@media(max-width: 1220px)
+{
+  .intern-heading
+  {
+    font-size: 6.2vh;
+  }
+  .internship strong
+  {
+    font-size: 2.5vh;
+  }
+  .internship
+  {
+    font-size: 2vh;
+  }
+}
+@media(max-width: 780px)
+{
+  .intern-heading
+  {
+    font-size: 5.2vh;
+  }
+  .internship strong
+  {
+    font-size: 2.2vh;
+  }
+  .internship
+  {
+    font-size: 1.9vh;
+  }
+}
+@media (max-width:626px) 
+{
+  .intern-heading
+  {
+    font-size: 7vh;
+  }
+  .internship strong
+  {
+    font-size: 1.7vh;
+  }
+  .internship
+  {
+    font-size: 1.3vh;
+  }
+}
+@media (max-width:465px) 
+{
+  .intern-heading
+  {
+    font-size: 5vh;
+  }
+  .internship strong
+  {
+    font-size: 2vh;
+  }
+  .internship
+  {
+    font-size: 1.5vh;
+  }
+}
+@media (max-width:250px) 
+{
+  .intern-heading
+  {
+    font-size: 4vh;
+  }
+  .internship strong
+  {
+    font-size: 1.5vh;
+  }
+  .internship
+  {
+    font-size: 1vh;
+  }
+}
+
+
+
+
+.page4
+{
+  height: 155vh;
+  width: 100%;
+  margin-top: 1vh;
+  word-wrap: break-word;
+  min-width: 141px;
+  position: relative;
+}
+.education-background-3
+{
+  position: absolute;
+  height: 155vh;
+  width: 100%;
+  z-index: -1;
+  opacity: .1;
+  object-fit: cover;
+}
+.skills-heading
+{
+  text-shadow: 0 0 12px #FFFFFF, 0 0 20px black, 0 0 30px black;
+  padding-left: 7%;
+  padding-right: 7%;
+  font-size: 10vh;
+  text-decoration: underline;
+}
+.skills
+{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 100;
+  padding-left: 9%;
+  padding-right: 6%;
+  padding-bottom: 1%;
+  font-size: 2.6vh;
+  white-space: pre-line;
+}
+.skills .strong-heading
+{
+  font-family: oswald;
+  font-size: 3vh;
+  color: antiquewhite;
+}
+.skills ul
+{
+  padding-left: 30px;
+}
+.skills li
+{
+  margin-left: 35px;
+}
+@media(max-width: 1125px)
+{
+  .skills-heading
+  {
+    font-size: 7vh;
+  }
+  .skills .strong-heading
+  {
+    font-size: 4vh;
+  }
+  .skills
+  {
+    font-size: 2.2vh;
+  }
+}
+@media(max-width: 765px)
+{
+  .skills-heading
+  {
+    font-size: 6vh;
+  }
+  .skills .strong-heading
+  {
+    font-size: 3.2vh;
+  }
+  .skills
+  {
+    font-size: 2vh;
+  }
+}
+@media (max-width:585px) 
+{
+  .skills-heading
+  {
+    font-size: 4.3vh;
+  }
+  .skills .strong-heading
+  {
+    font-size: 2.5vh;
+  }
+  .skills
+  {
+    font-size: 2.1vh;
+  }
+}
+@media (max-width:375px) 
+{
+  .skills-heading
+  {
+    font-size: 3.8vh;
+  }
+  .skills .strong-heading
+  {
+    font-size: 2.3vh;
+  }
+  .skills
+  {
+    font-size: 1.6vh;
+  }
+}
+@media (max-width:225px) 
+{
+  .skills-heading
+  {
+    font-size: 3vh;
+  }
+  .skills .strong-heading
+  {
+    font-size: 1.8vh;
+  }
+  .skills
+  {
+    font-size: 1.2vh;
+  }
+}
+
+
+
+.page5
+{
+  height: 100vh;
+  width: 100%;
+  margin-top: 1vh;
+  word-wrap: break-word;
+  position: relative;
+  min-width: 190px;
+}
+.education-background-4
+{
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  z-index: -1;
+  opacity: .1;
+  object-fit: cover;
+}
+.contact
+{
+  text-shadow: 0 0 12px #FFFFFF, 0 0 20px black, 0 0 30px black;
+  margin-left: 5vh;
+  margin-right: 5vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  font-size: 20vh;
+  padding-top: 100px;  
+  position: relative;
+  height: 80vh;
+  font-size: 12vh;
+}
+.button-class
+{
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  width: 10%;
+}
+.resume-button
+{
+  padding: 10px;
+  width: 100%; 
+  height:10%;
+  cursor: pointer;
+  border: 5px double black; 
+  transition: all .5s;
+  font-weight: 700;
+  min-width: 100px;
+  margin-bottom: 50px;
+  margin-left: 10%;
+}
+.resume-button:hover
+{
+  width: 80%;
+  background-color: black;
+  color: white;
+  border-radius: 20px;
+  min-width: 120px;
+}
+.resume-button:active
+{
+  transition: 0s;
+  opacity: .5;
+}
+.user-information
+{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+  right: 10%;
+  top: 15%;
+  height: 80%;
+  width: 30%;
+}
+.user-information input, textarea
+{
+  height: 50px;
+  border-radius: 28px;
+  margin-top: 20px;
+  padding-left: 10px;
+  font-size: 150%;
+  outline: none;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: left; 
+  white-space: pre-wrap;
+}
+.user-information #message
+{
+  padding: 15px;
+  height: 30vh;
+}
+.user-information .submit-button
+{
+  margin-top: 4%;
+  margin-left: 2px;
+  width: 10vh; 
+  height: 4vh;
+  border-radius: 18px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  transition: all .5s;
+}
+.user-information .submit-button:hover
+{
+  color: white;
+  background-color: black;
+}
+.user-information .submit-button:active
+{
+  color: white;
+  background-color: rgba(0, 0, 0, 0.692);
+  opacity: .5;
+  transition: 0s;
+}
+.footer
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  bottom: 100;
+  border-top: 1px solid white; 
+}
+.icons
+{
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+  margin-top: 1%;
+  cursor: pointer;
+}
+.material-icons.md-48 { font-size: 48px; }
+
+.contact .text-contact-me
+{
+  font-size: 18vh;
+}
+@media (max-width: 1100px) 
+{
+  .contact .text-contact-me
+  {
+    font-size: 13vh;
+  }
+}
+@media (max-width: 768px) 
+{
+  .contact .text-contact-me
+  {
+    font-size: 8vh;
+  }
+}
+
+@media (max-width: 500px) 
+{
+  .contact .text-contact-me
+  {
+    font-size: 5.5vh;
+  }
+}
+@media (max-width: 350px) 
+{
+  .contact
+  {
+    margin-left: 2vh;
+  }
+  .contact .text-contact-me
+  {
+    font-size: 5vh;
+  }
+}
+@media (max-width: 350px) 
+{
+  .contact
+  {
+    margin-left: 2vh;
+  }
+  .contact .text-contact-me
+  {
+    font-size: 3vh;
+  }
+  .user-information .submit-button
+  {
+    width: 6.5vh;
+  }
+}
+
+
+
+.page6
+{
+  height: 130vh;
+  width: 100%;
+  max-width: 100%;
+  margin-top: 1vh;
+  word-wrap: break-word;
+  position: relative;
+  min-width: 190px;
+}
+.certificate-background
+{
+  position: absolute;
+  height: 130vh;
+  width: 100%;
+  z-index: -1;
+  opacity: .2;
+  object-fit: cover;
+}
+.cert-heading
+{
+  position: absolute;
+  top:1%;
+  left: 2%;
+  font-size: 8vh;
+  text-decoration: underline;
+  transition: all 1s;
+  text-shadow: 0 0 12px #FFFFFF, 0 0 20px black, 0 0 30px black;
+}
+@media (max-width:1100px)
+{
+  .cert-heading
+  {
+    top: 5%;
+    writing-mode: vertical-lr; 
+    transform: rotate(180deg);
+  }
+}
+.page6-body
+{
+  max-height: 100%;
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: .3fr .3fr .3fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  column-gap: 10%;
+  row-gap: 30%;
+  padding: 10%;
+  margin-left: 10%;
+}
+.d1
+{
+  position: relative;
+  height: 120%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 10%;
+  padding: 1%;
+  cursor: pointer;
+  padding-top: 10%;
+  background-color: black;
+  border: 5px solid white;
+  z-index: 1;
+  transition: .5s all;
+}
+.d1:hover
+{
+  opacity: .7;
+  transform: translate(1%,1%);
+}
+.d1:active
+{
+  transition: 0s all;
+  opacity: .5;
+  transform: translate(2%,2%);
+}
+.certificate-image
+{
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10%;
+}
+.d1 .name
+{
+  transition: .5s all;
+  position: relative;
+  text-align: center;
+  color: white;
+  font-size: 2vh;
+  z-index: 2;
+  opacity: 1;
+  background-color: rgba(255, 0, 0, 0.562);
+  border-radius: 10%;
+  text-shadow: 3px 3px .1px black;
+}
+.d1:hover .name
+{
+  z-index: -1;
+  opacity: 0;
+}
